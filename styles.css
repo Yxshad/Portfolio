@@ -1,3 +1,5 @@
+/*BALISES GENERALES*/
+
 body{
     background: linear-gradient(#5856b9, #070a30);
     color:whitesmoke;
@@ -6,6 +8,19 @@ body{
     min-width: 100vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2vw;
+}
+
+h4{
+    font-size: 1.5em;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+h1{
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: xxx-large;
+    margin-bottom: 0;
 }
 
 
@@ -31,7 +46,7 @@ nav{
     align-items: center;
 }
 
-
+/*////////////////////*/
 /*  MAIN CONTENT  */
 
 /*  BAN DEBUT - ARRIVEE SITE  */
@@ -39,34 +54,27 @@ nav{
     display: flex;
     justify-content: center;
     min-height: 60vh;
-    background-image: url("./images/banniere.jpg");
+    background-image: url("./assets/images/banniere.jpg");
     background-blend-mode: luminosity;
     background-color: #4d3da5;
     background-size: cover;
     align-items: center;
 }
 
-#banContent{
+#banniere_Contenu{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#banContent:hover{
+#banniere_Contenu:hover{
     opacity: 80%;
 }
 
-h1{
-    font-family: fantasy;
-    font-weight: bold;
-    font-size: xxx-large;
-    margin-bottom: 0;
-}
-
+/*////////////////////*/
 /* A PROPOS AND SHIT */
 
-
-#quickIntro{
+#intro{
     display: flex;
     background-color: #5660b9;
     text-align: center;
@@ -74,36 +82,89 @@ h1{
     align-content: center;
 }
 
-.titrePlusDescription{
-    width:50%
+.intro_titrePlusDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width:50%;
+    padding-right: 3%;
+    align-items: center;
 }
 
-#divImage{
+#intro_divImage{
     align-content: center;
+    width: 50%;
 }
 
-#me{
+#intro_me{
     margin-top: 3%;
-    padding-left: 7%;
-    padding-right: 7%;
     width:50%
 }
 
-h4{
-    font-size: 2em;
-}
 
-#introText{
+#intro_titrePlusDescription_Text{
     font-size: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 70%;
+    text-align: justify;
 }
 
+/*////////////////////*/
+/*  COMPETENCES  */
+
+#competences_general{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#competences_general{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+}
+
+#competences_general_cv{
+    width:40%;
+}
+
+#competences_general_cv_balise{
+    width:100%;
+    height: 57vh;
+}
+
+#competences_general_technos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#competences_general_technos_row1{
+    display: flex;
+    flex-direction: row;
+}
+
+.competences_general_technos_ensemble{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.competences_general_technos_logos{
+    max-width: 10vh;
+    padding: 10px;
+}
+
+/*////////////////////*/
 /*  FOOTER  */
 
 footer{
     background: rgb(20, 20, 80);
     padding: 0;
     margin: 0;
-    height: 3em;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -111,5 +172,20 @@ footer{
 }
 
 #contact{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-around
 
+}
+
+#contact_infosContact{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#contact_reseaux{
+    display: flex;
+    flex-direction: column;
 }

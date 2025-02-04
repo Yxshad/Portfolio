@@ -15,7 +15,7 @@
             <p>HELLO WORLD</p>
         </div>
         <div id="chapitrage">
-            <a>Epic link 1</a>
+            <a href="#intro">Epic link 1</a>
             <a>Epic link 2</a>
             <a>Epic link 3</a>
         </div> 
@@ -23,36 +23,80 @@
 
     <!-- INTRO / ARRIVÉE -->
     <div id="banniere">
-        <div id="banContent">
+        <div id="banniere_Contenu">
             <h1>Elsa LAVERGNE</h1>
-            <p id="smallDescription">Alternante développeuse chez AG-CARTO</p>
+            <p id="banniere_smallDescription">Alternante développeuse chez AG-CARTO</p>
             <hr width="100%">
         </div>
     </div>
 
     <!--  MA GROSSE TÊTE EN SAH-->
 
-    <div id="quickIntro">
-        <div id="divImage"> 
-            <img id='me' src="images/me.jpg"/>
+    <div id="intro">
+        <div id="intro_divImage"> 
+            <img id='intro_me' src="assets/images/me.jpg"/>
         </div>
-        <div class="titrePlusDescription">
+        <div class="intro_titrePlusDescription">
             <h4>A propos de moi...</h4>
-            <p id="introText">
+            <p id="intro_titrePlusDescription_Text">
                 Je suis actuellement élève de 3ème année à l'IUT informatique de Bayonne en parcours Intégration d'Applications et Intégration des Sytèmes d'Information.<br/>
                 Je suis aussi alternant développeur chez AG-CARTO.
                 Ecrivain en herbe et ayant pour passion le dessin, j'essaie de combiner la pratique en programmation avec de la créativité pour les solutions que je conçois.
             </p>
         </div>
     </div>
+
+    <!-- COMPETENCES-->
     
+    <div id="competences">
+
+        <div id="competences_general">
+            <div id="competences_general_cv">
+
+                <embed id="competences_general_cv_balise" src="assets/pdf/Lavergne Elsa CV.pdf" type="application/pdf"/>
+
+            </div>
+        
+            <div id="competences_general_technos">
+                <div id="competences_general_technos_row1">
+                    <div class="competences_general_technos_ensemble">
+                        <img id="competences_general_technos_logos_1" class="competences_general_technos_logos" src="./assets/images/css.png"/>
+                        <label for="competences_general_technos_logos_1"> CSS</label>
+                    </div>
+                    <div class="competences_general_technos_ensemble">
+                        <img id="competences_general_technos_logos_2" class="competences_general_technos_logos" src="./assets/images/html.png"/>
+                        <label for="competences_general_technos_logos_2"> HTML</label>
+                    </div>
+                    <div class="competences_general_technos_ensemble">
+                        <img id="competences_general_technos_logos_3" class="competences_general_technos_logos" src="./assets/images/js.png"/>
+                        <label for="competences_general_technos_logos_3"> Javascript</label>
+                    </div>
+                </div>
+                <div id="competences_general_technos_row2">
+                    <img class="competences_general_technos_logos" src="./assets/images/sql.png"/>
+                    <img class="competences_general_technos_logos" src="./assets/images/react.png"/>
+                </div>
+
+            </div>
+        </div>
+        <div id="competences_statistiques">
+
+        </div>
+
+    </div>
 
     <!--  FOOTER  -->
     <footer>
         <div id="contact">
-            <p>Me contacter</p>
-            <div id="infosContact">
-
+            <div id="contact_infosContact">
+                <h4>Me contacter</h4>
+                <a>Mon Github</a>
+                <a>Mail personnel</a>
+            </div>
+            <div id="contact_reseaux">
+                <h4>Mes réseaux sociaux</h4>
+                <a>Github</a>
+                <a>LinkedIn</a>
             </div>
         </div>
         
