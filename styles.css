@@ -34,7 +34,7 @@ nav{
 
 /*  MAIN CONTENT  */
 
-/*  INTRO - ARRIVEE SITE  */
+/*  BAN DEBUT - ARRIVEE SITE  */
 #banniere{
     display: flex;
     justify-content: center;
@@ -63,8 +63,38 @@ h1{
     margin-bottom: 0;
 }
 
-#smallDescription{
+/* A PROPOS AND SHIT */
 
+
+#quickIntro{
+    display: flex;
+    background-color: #5660b9;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.titrePlusDescription{
+    width:50%
+}
+
+#divImage{
+    align-content: center;
+}
+
+#me{
+    margin-top: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
+    width:50%
+}
+
+h4{
+    font-size: 2em;
+}
+
+#introText{
+    font-size: 50%;
 }
 
 /*  FOOTER  */
