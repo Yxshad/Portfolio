@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style></style>
     <link rel="stylesheet" href="styles.css">
-    <title>Shaggy's Portfolio</title>
+    <link href="./lib/Swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="./lib/Swiper/swiper-bundle.min.js"></script>
+    <script src="./fonctions.js"></script> 
+    <title>Shaggy's Portfolio</title>   
+
 </head>
 <body>
 
@@ -15,8 +18,8 @@
             <p>HELLO WORLD</p>
         </div>
         <div id="chapitrage">
-            <a href="#intro">Epic link 1</a>
-            <a>Epic link 2</a>
+            <a href="#intro">A propos</a>
+            <a href="#Competences">Compétences</a>
             <a>Epic link 3</a>
         </div> 
     </nav>
@@ -49,14 +52,12 @@
     <!-- COMPETENCES-->
     
     <div id="competences">
-
+        <h4 id="Competences">Compétences</h4>
         <div id="competences_general">
             <div id="competences_general_cv">
-
+                <!-- A REMPLACER CAR C'EST DEGUEULASSE - VOIR POUR IMAGE ?-->
                 <embed id="competences_general_cv_balise" src="assets/pdf/Lavergne Elsa CV.pdf" type="application/pdf"/>
-
             </div>
-        
             <div id="competences_general_technos">
                 <div id="competences_general_technos_row1">
                     <div class="competences_general_technos_ensemble">
@@ -73,17 +74,63 @@
                     </div>
                 </div>
                 <div id="competences_general_technos_row2">
-                    <img class="competences_general_technos_logos" src="./assets/images/sql.png"/>
-                    <img class="competences_general_technos_logos" src="./assets/images/react.png"/>
+                    <div class="competences_general_technos_ensemble">
+                        <img id="competences_general_technos_logos_4" class="competences_general_technos_logos" src="./assets/images/sql.png"/>
+                        <label for="competences_general_technos_logos_4"> SQL</label>
+                    </div>
+                    <div class="competences_general_technos_ensemble">
+                        <img id="competences_general_technos_logos_5" class="competences_general_technos_logos" src="./assets/images/react.png"/>
+                        <label for="competences_general_technos_logos_5"> React </label>
+                    </div>
                 </div>
-
             </div>
         </div>
         <div id="competences_statistiques">
-
+            <h4>Niveau de maîtrise</h4>
+            <div id="competences_statistiques_general">
+                <label for="competences_statistiques_general_barre_1">CSS</label>
+                <progress id="competences_statistiques_general_barre_1" value="10" max="50"></progress>
+                <label for="competences_statistiques_general_barre_2">HTML</label>
+                <progress id="competences_statistiques_general_barre_2" value="10" max="50"></progress>
+                <label for="competences_statistiques_general_barre_3">Javascript</label>
+                <progress id="competences_statistiques_general_barre_3" value="10" max="50"></progress>
+                <label for="competences_statistiques_general_barre_4">SQL</label>
+                <progress id="competences_statistiques_general_barre_4" value="10" max="50"></progress>
+                <label for="competences_statistiques_general_barre_5">React</label>
+                <progress id="competences_statistiques_general_barre_5" value="10" max="50"></progress>
+            </div>
         </div>
 
     </div>
+
+    <!-- PROJETS-->
+
+    <div id="projets">
+            <h4>Mes projets</h4>        
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="./assets/images/projet1.jpg"/></div>
+              <div class="swiper-slide"><img src="./assets/images/projet2.jpg"/></div>
+              <div class="swiper-slide"><img src="./assets/images/projet3.jpg"/></div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    
+    </div>
+
+    
+      
 
     <!--  FOOTER  -->
     <footer>
@@ -96,12 +143,11 @@
             <div id="contact_reseaux">
                 <h4>Mes réseaux sociaux</h4>
                 <a>Github</a>
-                <a>LinkedIn</a>
+                <a href="https://www.linkedin.com/in/elsa-lavergne-a98826263/">LinkedIn</a>
             </div>
         </div>
         
     </footer>
 
-    
 </body>
 </html>
