@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="swipperStyle.css">
     <link href="./lib/Swiper/swiper-bundle.min.css" rel="stylesheet">
     <script src="./lib/Swiper/swiper-bundle.min.js"></script>
     <script src="./fonctions.js"></script> 
@@ -55,35 +56,36 @@
         <h4 id="Competences">Compétences</h4>
         <div id="competences_general">
             <div id="competences_general_cv">
-                <!-- A REMPLACER CAR C'EST DEGUEULASSE - VOIR POUR IMAGE ?-->
-                <embed id="competences_general_cv_balise" src="assets/pdf/Lavergne Elsa CV.pdf" type="application/pdf"/>
-            </div>
+                <img id="cv-preview" src="assets/images/cv-preview.png" alt="Aperçu du CV" onclick="window.open('assets/pdf/Lavergne_Elsa_CV.pdf')">
+                <a href="assets/pdf/Lavergne_Elsa_CV.pdf" download class="btn-download">Télécharger mon CV</a>
+            </div> 
+
             <div id="competences_general_technos">
-                <div id="competences_general_technos_row1">
-                    <div class="competences_general_technos_ensemble">
-                        <img id="competences_general_technos_logos_1" class="competences_general_technos_logos" src="./assets/images/css.png"/>
-                        <label for="competences_general_technos_logos_1"> CSS</label>
+                <div class="competences_row">
+                    <div class="competences_item">
+                        <img class="competences_logo" src="./assets/images/css.png" alt="CSS"/>
+                        <label>CSS</label>
                     </div>
-                    <div class="competences_general_technos_ensemble">
-                        <img id="competences_general_technos_logos_2" class="competences_general_technos_logos" src="./assets/images/html.png"/>
-                        <label for="competences_general_technos_logos_2"> HTML</label>
+                    <div class="competences_item">
+                        <img class="competences_logo" src="./assets/images/html.png" alt="HTML"/>
+                        <label>HTML</label>
                     </div>
-                    <div class="competences_general_technos_ensemble">
-                        <img id="competences_general_technos_logos_3" class="competences_general_technos_logos" src="./assets/images/js.png"/>
-                        <label for="competences_general_technos_logos_3"> Javascript</label>
-                    </div>
-                </div>
-                <div id="competences_general_technos_row2">
-                    <div class="competences_general_technos_ensemble">
-                        <img id="competences_general_technos_logos_4" class="competences_general_technos_logos" src="./assets/images/sql.png"/>
-                        <label for="competences_general_technos_logos_4"> SQL</label>
-                    </div>
-                    <div class="competences_general_technos_ensemble">
-                        <img id="competences_general_technos_logos_5" class="competences_general_technos_logos" src="./assets/images/react.png"/>
-                        <label for="competences_general_technos_logos_5"> React </label>
+                    <div class="competences_item">
+                        <img class="competences_logo" src="./assets/images/js.png" alt="Javascript"/>
+                        <label>Javascript</label>
                     </div>
                 </div>
-            </div>
+                <div class="competences_row">
+                    <div class="competences_item">
+                        <img class="competences_logo" src="./assets/images/sql.png" alt="SQL"/>
+                        <label>SQL</label>
+                    </div>
+                    <div class="competences_item">
+                        <img class="competences_logo" src="./assets/images/react.png" alt="React"/>
+                        <label>React</label>
+                    </div>
+                </div>
+            </div>            
         </div>
         <div id="competences_statistiques">
             <h4>Niveau de maîtrise</h4>
@@ -106,15 +108,45 @@
     <!-- PROJETS-->
 
     <div id="projets">
-            <h4>Mes projets</h4>        
+        <h4>Mes projets</h4>        
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><img src="./assets/images/projet1.jpg"/></div>
-              <div class="swiper-slide"><img src="./assets/images/projet2.jpg"/></div>
-              <div class="swiper-slide"><img src="./assets/images/projet3.jpg"/></div>
-              ...
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="card" onclick="openModal()">
+                        <div class="card-header">
+                            <img src="./assets/images/projet1.jpg" alt="Projet 1" class="card-image"/>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Projet 1</h3>
+                            <p class="card-description">Description du projet 1... </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" onclick="openModal()">
+                        <div class="card-header">
+                            <img src="./assets/images/BTSPlay.png" alt="Projet 2" class="card-image"/>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">BTSPlay</h3>
+                            <p class="card-description">Projet étudiant - Media Asset Manager - PHP - FTP - SQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" onclick="openModal()">
+                        <div class="card-header">
+                            <img src="./assets/images/projet3.jpg" alt="Projet 3" class="card-image"/>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Projet 3</h3>
+                            <p class="card-description">Description du projet 3... </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional slides... -->
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -126,7 +158,13 @@
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
         </div>
-    
+        <div id="projets-description-projet">
+            <p class="projets-description-projet-text">BTSPlay est un projet mené pour le BTS Audiovisuel de Biarrtiz et ayant
+                comme commanditaire monsieur Philippe MARTIN. Le but était de créer un Media Asset Manager
+                pour consulter, transférer et sauvegarder les métadonnées des vidéos des étudiants. 
+            </p>
+        </div>
+        
     </div>
 
     
@@ -148,6 +186,17 @@
         </div>
         
     </footer>
+
+
+    <!-- MODALES -->
+
+    <!-- FENETRE MODALE 
+
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCV()"></span>
+        </div>
+    </div>-->
 
 </body>
 </html>
