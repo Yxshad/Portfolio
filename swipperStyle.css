@@ -1,8 +1,9 @@
 /* Styles pour le Slider */
 .swiper {
-    width: 50%; /* Ajuste la largeur globale du swiper */
-    margin: auto; /* Centre le swiper sur la page */
-    padding: 20px 0; /* Espacement autour du swiper */
+    width: 80%; 
+    margin: auto; 
+    padding: 20px 0;
+    height: auto;
 }
 
 .swiper-slide {
