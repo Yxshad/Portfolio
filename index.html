@@ -56,54 +56,60 @@
         <h4 id="Competences">Compétences</h4>
         <div id="competences_general">
             <div id="competences_general_cv">
-                <img id="cv-preview" src="assets/images/cv-preview.png" alt="Aperçu du CV" onclick="window.open('assets/pdf/Lavergne_Elsa_CV.pdf')">
+                <img id="cv-preview" src="assets/images/Lavergne_Elsa_CV.png" alt="Aperçu du CV" onclick="window.open('assets/pdf/Lavergne_Elsa_CV.pdf')">
                 <a href="assets/pdf/Lavergne_Elsa_CV.pdf" download class="btn-download">Télécharger mon CV</a>
             </div> 
 
             <div id="competences_general_technos">
-                <div class="competences_row">
-                    <div class="competences_item">
-                        <img class="competences_logo" src="./assets/images/css.png" alt="CSS"/>
-                        <label>CSS</label>
-                    </div>
-                    <div class="competences_item">
-                        <img class="competences_logo" src="./assets/images/html.png" alt="HTML"/>
-                        <label>HTML</label>
-                    </div>
-                    <div class="competences_item">
-                        <img class="competences_logo" src="./assets/images/js.png" alt="Javascript"/>
-                        <label>Javascript</label>
+                <div class="competences_item">
+                    <img class="competences_logo" src="./assets/images/css.png" alt="CSS"/>
+                    <div class="competences_statistiques_general_details">
+                        <label for="competences_statistiques_general_barre_css">CSS</label>
+                        <progress id="competences_statistiques_general_barre_css" value="35" max="50"></progress>
                     </div>
                 </div>
-                <div class="competences_row">
-                    <div class="competences_item">
-                        <img class="competences_logo" src="./assets/images/sql.png" alt="SQL"/>
-                        <label>SQL</label>
-                    </div>
-                    <div class="competences_item">
-                        <img class="competences_logo" src="./assets/images/react.png" alt="React"/>
-                        <label>React</label>
+            
+                <div class="competences_item">
+                    <img class="competences_logo" src="./assets/images/html.png" alt="HTML"/>
+                    <div class="competences_statistiques_general_details">
+                        <label for="competences_statistiques_general_barre_html">HTML</label>
+                        <progress id="competences_statistiques_general_barre_html" value="35" max="50"></progress>
                     </div>
                 </div>
-            </div>            
+            
+                <div class="competences_item">
+                    <img class="competences_logo" src="./assets/images/js.png" alt="Javascript"/>
+                    <div class="competences_statistiques_general_details">
+                        <label for="competences_statistiques_general_barre_js">Javascript</label>
+                        <progress id="competences_statistiques_general_barre_js" value="35" max="50"></progress>
+                    </div>
+                </div>
+            
+                <div class="competences_item">
+                    <img class="competences_logo" src="./assets/images/sql.png" alt="SQL"/>
+                    <div class="competences_statistiques_general_details">
+                        <label for="competences_statistiques_general_barre_sql">SQL</label>
+                        <progress id="competences_statistiques_general_barre_sql" value="45" max="50"></progress>
+                    </div>
+                </div>
+            
+                <div class="competences_item">
+                    <img class="competences_logo" src="./assets/images/react.png" alt="React"/>
+                    <div class="competences_statistiques_general_details">
+                        <label for="competences_statistiques_general_barre_react">React</label>
+                        <progress id="competences_statistiques_general_barre_react" value="25" max="50"></progress>
+                    </div>
+                </div>
+            
+                <div class="competences_item">
+                    <img class="competences_logo" src="./assets/images/typescript.png" alt="Typescript"/>
+                    <div class="competences_statistiques_general_details">
+                        <label for="competences_statistiques_general_barre_ts">Typescript</label>
+                        <progress id="competences_statistiques_general_barre_ts" value="25" max="50"></progress>
+                    </div>
+                </div>
+            </div>             
         </div>
-        <div id="competences_statistiques">
-            <h4>Niveau de maîtrise</h4>
-            <div id="competences_statistiques_general">
-                <label for="competences_statistiques_general_barre_1">CSS</label>
-                <progress id="competences_statistiques_general_barre_1" value="10" max="50"></progress>
-                <label for="competences_statistiques_general_barre_2">HTML</label>
-                <progress id="competences_statistiques_general_barre_2" value="10" max="50"></progress>
-                <label for="competences_statistiques_general_barre_3">Javascript</label>
-                <progress id="competences_statistiques_general_barre_3" value="10" max="50"></progress>
-                <label for="competences_statistiques_general_barre_4">SQL</label>
-                <progress id="competences_statistiques_general_barre_4" value="10" max="50"></progress>
-                <label for="competences_statistiques_general_barre_5">React</label>
-                <progress id="competences_statistiques_general_barre_5" value="10" max="50"></progress>
-            </div>
-        </div>
-
-    </div>
 
     <!-- PROJETS-->
 
