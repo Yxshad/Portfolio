@@ -7,7 +7,7 @@
 
 function initCarrousel(){
     const swiperVideo = new Swiper('.swiper', {
-        slidesPerView: 3,
+        slidesPerView: 4,
       spaceBetween: 30,
       loop: true,
       pagination: {
@@ -38,4 +38,18 @@ function openCV() {
 
 function closeCV() {
     document.getElementById('cv-modal').style.display = 'none';
+}
+
+function showDescription(id) {
+  // Masquer tous les textes explicatifs
+  let allExplanationText = document.getElementsByClassName('projets-description-projet-text');
+  for (let i = 0; i < allExplanationText.length; i++) {
+      allExplanationText[i].style.display = 'none';
+  }
+
+  // Afficher le texte explicatif spécifique
+  let texteExplicatif = document.getElementById(id);
+  if (texteExplicatif) {
+      texteExplicatif.style.display = 'block';
+  }
 }

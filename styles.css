@@ -9,17 +9,18 @@ body{
     font-size: 2vw;
 }
 
+
 h4{
     
     font-size: 1.5em;
     margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 0;
 }
 
 h1{
     font-family: fantasy;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 1em;
     margin-bottom: 0;
 }
 
@@ -40,6 +41,8 @@ progress::-webkit-progress-value {
     border-radius: 6px;
 }
 
+/*******************************/
+
 /*  NAVIGATEUR  */
 nav{
     background: rgb(20, 20, 80);
@@ -51,13 +54,34 @@ nav{
     flex-wrap: wrap;
 }
 
+
+
+/**** HELLO  WORLD  ANIMATION*****/
+
 #logo{
-    margin-left: 3%;
+    margin-left: 20px;
+    width:50%;
 }
+
+#logo-text{
+    font-size: 50px;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/*****************/
 
 #chapitrage{
     display: flex;
     width: 40%;
+    font-size: 0.8em;
     justify-content: space-around;
     align-items: center;
 }
@@ -97,34 +121,42 @@ nav{
     text-align: center;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
 }
+
+#intro-principal{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 
 .intro_titrePlusDescription{
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    width:50%;
-    padding-right: 3%;
+    justify-content: center;
+    width: 40%;
     align-items: center;
 }
 
 #intro_divImage{
     align-content: center;
-    width: 50%;
 }
 
-#intro_me{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    width:50%
+#intro_me {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
 }
 
+#intro_me:hover {
+    transform: rotate(360deg);
+}
 
 #intro_titrePlusDescription_Text{
     font-size: 50%;
     padding-left: 5%;
     padding-right: 5%;
-    width: 70%;
     text-align: justify;
 }
 
@@ -270,10 +302,17 @@ nav{
     height: auto;
 }
 
+.competences_statistiques_general_details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espace uniforme entre les éléments */
+}
+
 .competences_item label {
     font-weight: bold;
     font-size: 14px;
     color: #ffffff;
+    margin-bottom: 2px; /* Espace réduit sous le label */
 }
 
 .competences_item img {
@@ -282,6 +321,22 @@ nav{
 
 .competences_item:hover img {
     transform: scale(1.2);
+}
+
+/* Style pour la barre de progression */
+progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Style pour le texte de détails */
+.competences_technos_details {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #dddddd;
+    margin-bottom: 0;
 }
 
 
@@ -333,38 +388,8 @@ nav{
     font-size: 25px;
 }
 
-
-/*////////////////////*/
-/*  FOOTER  */
-
-footer{
-    background: rgb(20, 20, 80);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
-
-#contact{
-    display: flex;
-    flex-direction: row;
-    margin-top: 3%;
-    width:100%;
-    justify-content: space-around
-
-}
-
-#contact_infosContact{
-    display: flex;
-    flex-direction: column;
-
-}
-
-#contact_reseaux{
-    display: flex;
-    flex-direction: column;
+#projets-titre{
+    margin-bottom: 20px;
 }
 
 @media (max-width: 850px) {

@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="swipperStyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="hobbysPart.css">
     <link href="./lib/Swiper/swiper-bundle.min.css" rel="stylesheet">
     <script src="./lib/Swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="./fonctions.js"></script> 
     <title>Shaggy's Portfolio</title>   
 
@@ -16,11 +19,14 @@
     <!-- NAVIGATEUR -->
     <nav>
         <div id="logo">
-            <p>HELLO WORLD</p>
+            <h1 id="logo-text">
+                Hello World
+            </h1>
         </div>
         <div id="chapitrage">
             <a href="#intro">A propos</a>
             <a href="#Competences">Compétences</a>
+            <a href="#projets">Projets</a>
         </div> 
     </nav>
 
@@ -36,16 +42,39 @@
     <!--  MA GROSSE TÊTE EN SAH-->
 
     <div id="intro">
-        <div id="intro_divImage"> 
-            <img id='intro_me' src="assets/images/Wakemeup.jpg"/>
+        <div id="intro-principal">
+            <div id="intro_divImage"> 
+                <img id='intro_me' src="assets/images/LogoOfficial.png"/>
+            </div>
+            <div class="intro_titrePlusDescription">
+                <h4>A propos de moi...</h4>
+                <p id="intro_titrePlusDescription_Text">
+                    Je suis actuellement élève de 3ème année à l'IUT informatique de Bayonne en parcours Intégration d'Applications et Intégration des Sytèmes d'Information.<br/>
+                    Je suis aussi alternant développeur chez AG-CARTO.
+                    Ecrivain en herbe et ayant pour passion le dessin, j'essaie de combiner la pratique en programmation avec de la créativité pour les solutions que je conçois.
+                </p>
+            </div>
         </div>
-        <div class="intro_titrePlusDescription">
-            <h4>A propos de moi...</h4>
-            <p id="intro_titrePlusDescription_Text">
-                Je suis actuellement élève de 3ème année à l'IUT informatique de Bayonne en parcours Intégration d'Applications et Intégration des Sytèmes d'Information.<br/>
-                Je suis aussi alternant développeur chez AG-CARTO.
-                Ecrivain en herbe et ayant pour passion le dessin, j'essaie de combiner la pratique en programmation avec de la créativité pour les solutions que je conçois.
-            </p>
+        <div id="intro-hobbies">
+            <h4> Quelques centres d'intérêts... </h4>
+            <div id="intro-hobbies-liste">
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-pencil-alt hobby-icon"></i>
+                    Dessin
+                </button>
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-pen-fancy hobby-icon"></i>
+                    Ecriture
+                </button>
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-film hobby-icon"></i>
+                    Montage vidéo
+                </button>
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-palette hobby-icon"></i>
+                    Graphisme
+                </button>
+            </div>
         </div>
     </div>
 
@@ -131,24 +160,24 @@
     <!-- PROJETS-->
 
     <div id="projets">
-        <h4>Mes projets</h4>        
+        <h4 id="projets-titre">Mes projets</h4>        
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <div class="card" onclick="openModal()">
+                    <div class="card" onclick="showDescription('projets-description-projet-Portfolio')">
                         <div class="card-header">
-                            <img src="./assets/images/projet1.jpg" alt="Projet 1" class="card-image"/>
+                            <img src="./assets/images/portfolio.png" alt="Portfolio" class="card-image"/>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Projet 1</h3>
-                            <p class="card-description">Description du projet 1... </p>
+                            <h3 class="card-title">Portfolio</h3>
+                            <p class="card-description">HTML - CSS - Javascript</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card" onclick="openModal()">
+                    <div class="card" onclick="showDescription('projets-description-projet-BTS')">
                         <div class="card-header">
                             <img src="./assets/images/BTSPlay.png" alt="Projet 2" class="card-image"/>
                         </div>
@@ -159,17 +188,38 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card" onclick="openModal()">
+                    <div class="card" onclick="showDescription('projets-description-projet-BTS')">
                         <div class="card-header">
-                            <img src="./assets/images/projet3.jpg" alt="Projet 3" class="card-image"/>
+                            <img src="./assets/images/BTSPlay.png" alt="Projet 2" class="card-image"/>
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Projet 3</h3>
-                            <p class="card-description">Description du projet 3... </p>
+                            <h3 class="card-title">BTSPlay</h3>
+                            <p class="card-description">Projet étudiant - Media Asset Manager - PHP - FTP - SQL</p>
                         </div>
                     </div>
                 </div>
-                <!-- Additional slides... -->
+                <div class="swiper-slide">
+                    <div class="card" onclick="showDescription('projets-description-projet-NDI2023')">
+                        <div class="card-header">
+                            <img src="./assets/images/photoDeLaTeam.png" alt="Projet 2" class="card-image"/>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Nuit de l'info 2023</h3>
+                            <p class="card-description">Projet étudiant - PHP - Javascript - HTML - CSS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" onclick="showDescription('projets-description-projet-NDI2024')">
+                        <div class="card-header">
+                            <img src="./assets/images/photo_group.png" alt="NDI2024" class="card-image"/>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Nuit de l'info 2024</h3>
+                            <p class="card-description">Projet étudiant - CSS - PHP - Javascript - HTML</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -182,9 +232,21 @@
             <div class="swiper-scrollbar"></div>
         </div>
         <div id="projets-description-projet">
-            <p class="projets-description-projet-text">BTSPlay est un projet mené pour le BTS Audiovisuel de Biarrtiz et ayant
+            <p id="projets-description-projet-BTS" class="projets-description-projet-text">BTSPlay est un projet mené pour le BTS Audiovisuel de Biarritz et ayant
                 comme commanditaire monsieur Philippe MARTIN. Le but était de créer un Media Asset Manager
                 pour consulter, transférer et sauvegarder les métadonnées des vidéos des étudiants. 
+            </p>
+            <p id="projets-description-projet-Portfolio" class="projets-description-projet-text" style="display: none;">Ce portfolio est bien entendu un des projets sur lequel j'ai travaillé.</br>
+                Je l'ai repris plusieurs fois par insatisfaction de mes compétences et enfin, en troisième année, je suis parvenu à atteindre un stade de complétion que je considère satisfaisant.</br>
+                C'est un site format 'One Page' créé principalement en HTML/CSS/Javascript.
+            </p>
+            <p id="projets-description-projet-NDI2024" class="projets-description-projet-text" style="display: none;">J'ai participé à la nuit de l'info 2024 dans l'équipe 50 nuances de sel.</br>
+                Nous avons dû créer un site soulignant les similarités entre le corps et l'océan sous l'effet du réchauffement climatique. </br>
+                Le site est accessible <a href="https://50nuancesdesel.alwaysdata.net/index.php/index.php">ici</a>. 
+            </p>
+            <p id="projets-description-projet-NDI2023" class="projets-description-projet-text" style="display: none;">J'ai participé à la nuit de l'info 2023 dans l'équipe Fromage et Desserts.</br>
+                Nous avons dû créer un site éducatif au sujet des fake news sur le réchauffement climatique.</br>
+                Le site est accessible <a href="https://50nuancesdesel.alwaysdata.net/index.php/index.php">ici</a>. 
             </p>
         </div>
         
@@ -196,19 +258,28 @@
     <!--  FOOTER  -->
     <footer>
         <div id="contact">
-            <div id="contact_infosContact">
+            <div class="contact_section">
                 <h4>Me contacter</h4>
-                <a>Mon Github</a>
-                <a>Mail personnel</a>
+                <a href="https://github.com/TonPseudo" class="contact_link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> Mon Github
+                </a>
+                <a href="mailto:tonemail@example.com" class="contact_link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail"> Mail personnel
+                </a>
             </div>
-            <div id="contact_reseaux">
+            <div class="contact_section">
                 <h4>Mes réseaux sociaux</h4>
-                <a>Github</a>
-                <a href="https://www.linkedin.com/in/elsa-lavergne-a98826263/">LinkedIn</a>
+                <a href="https://github.com/TonPseudo" class="contact_link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/elsa-lavergne-a98826263/" class="contact_link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn
+                </a>
             </div>
         </div>
-        
     </footer>
+    
+    
 
 
     <!-- MODALES -->
