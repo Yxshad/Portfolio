@@ -1,40 +1,51 @@
-button {
-    padding: 0.8em 1.8em;
-    border: 2px solid #17C3B2;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 16px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #17C3B2;
-   }
-   
-   button::before {
-    content: '';
-    width: 0;
-    height: 300%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background: #17C3B2;
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-   }
-   
-   button:hover::before {
-    width: 105%;
-   }
-   
-   button:hover {
-    color: #111;
-   }
+/* --- SECTIONS HOBBIES / SOFT SKILLS --- */
+#intro-hobbies {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
 
-#intro-hobbies{
-    margin-bottom: 20px;
+#intro-hobbies-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* --- LISTE DE BOUTONS --- */
+#intro-hobbies-liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* --- STYLE DES BOUTONS --- */
+button {
+    padding: 12px 20px;
+    border: none;
+    background: linear-gradient(135deg, rgb(163, 87, 214), rgb(195, 138, 233));
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+button .hobby-icon {
+    font-size: 18px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: default;
 }

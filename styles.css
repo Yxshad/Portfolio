@@ -9,6 +9,10 @@ body{
     font-size: 2vw;
 }
 
+/* Décalage des ancres pour éviter qu'elles soient cachées sous la navbar */
+section {
+    scroll-margin-top: 5em; /* Décale les sections pour compenser la navbar */
+}
 
 h4{
     
@@ -44,46 +48,58 @@ progress::-webkit-progress-value {
 /*******************************/
 
 /*  NAVIGATEUR  */
-nav{
-    background: rgb(20, 20, 80);
-    padding: 0;
-    margin: 0;
-    height: 3em;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 80, 0.9);
+    padding: 0 20px;
+    height: 4em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
-
 
 
 /**** HELLO  WORLD  ANIMATION*****/
 
-#logo{
-    margin-left: 20px;
-    width:50%;
+
+#logo-text {
+    margin-top: 0;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-#logo-text{
-    font-size: 50px;
-}
-
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+#intro-hobbies-title{
+    margin-bottom: 1%;
+    margin-top: 0;
 }
 
 /*****************/
 
-#chapitrage{
+#chapitrage {
     display: flex;
-    width: 40%;
-    font-size: 0.8em;
-    justify-content: space-around;
-    align-items: center;
+    gap: 20px; /* Espace entre les liens */
+    height: 100%; /* Empêche les éléments de sortir */
+    align-items: center; /* Centre bien les liens */
+    margin-right:3%;
+}
+
+#chapitrage a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+#chapitrage a:hover {
+    color: #9900ff; /* Jaune doré au survol */
 }
 
 /*////////////////////*/
@@ -93,7 +109,7 @@ nav{
 #banniere{
     display: flex;
     justify-content: center;
-    min-height: 60vh;
+    min-height: 70vh;
     background-image: url("./assets/images/banniere.jpg");
     background-blend-mode: luminosity;
     background-color: #4d3da5;
@@ -115,49 +131,71 @@ nav{
 /*////////////////////*/
 /* A PROPOS AND SHIT */
 
-#intro{
-    display: flex;
-    background-color: #5660b9;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-
-#intro-principal{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-
-.intro_titrePlusDescription{
+#intro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 40%;
     align-items: center;
+    background: linear-gradient(135deg, #4a5bbd, #7986e6); /* Dégradé moderne */
+    text-align: center;
+    padding: 50px 10%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-#intro_divImage{
-    align-content: center;
+/* --- PARTIE PRINCIPALE (IMAGE + DESCRIPTION) --- */
+#intro-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Ajoute de l’espace entre l’image et le texte */
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+/* --- IMAGE STYLE --- */
+#intro_divImage {
+    display: flex;
+    justify-content: center;
 }
 
 #intro_me {
-    width: 100%;
+    width: 80%;
     height: auto;
-    transition: transform 0.5s ease-in-out;
+    border-radius: 50%;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #intro_me:hover {
-    transform: rotate(360deg);
+    transform: scale(1.1); /* Effet zoom doux au lieu d'une rotation agressive */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-#intro_titrePlusDescription_Text{
-    font-size: 50%;
-    padding-left: 5%;
-    padding-right: 5%;
+/* --- TEXTE DESCRIPTION --- */
+.intro_titrePlusDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Effet verre dépoli */
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro_titrePlusDescription h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white; /* Or */
+}
+
+#intro_titrePlusDescription_Text {
+    font-size: 16px;
+    padding: 10px;
     text-align: justify;
+    line-height: 1.6;
 }
 
 /*////////////////////*/
@@ -169,10 +207,13 @@ nav{
     align-items: center;
 }
 
+#competences_titre{
+    margin-bottom: 20px;
+}
+
 #competences_general{
     display: flex;
     align-items: center; /* Alignement en haut */
-    margin-bottom: 10px;
 }
 
 #competences_general_cv {

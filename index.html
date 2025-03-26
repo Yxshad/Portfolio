@@ -11,21 +11,19 @@
     <script src="./lib/Swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="./fonctions.js"></script> 
-    <title>Shaggy's Portfolio</title>   
+    <title>Portfolio</title>   
 
 </head>
 <body>
 
     <!-- NAVIGATEUR -->
     <nav>
-        <div id="logo">
-            <h1 id="logo-text">
-                Hello World
-            </h1>
-        </div>
+        <h1 id="logo-text">
+            Hello World
+        </h1>
         <div id="chapitrage">
             <a href="#intro">A propos</a>
-            <a href="#Competences">Compétences</a>
+            <a href="#competences">Compétences</a>
             <a href="#projets">Projets</a>
         </div> 
     </nav>
@@ -34,7 +32,7 @@
     <div id="banniere">
         <div id="banniere_Contenu">
             <h1>Elsa LAVERGNE</h1>
-            <p id="banniere_smallDescription">Alternante développeuse chez AG-CARTO</p>
+            <p id="banniere_smallDescription">Développeuse FullStack</p>
             <hr width="100%">
         </div>
     </div>
@@ -56,7 +54,7 @@
             </div>
         </div>
         <div id="intro-hobbies">
-            <h4> Quelques centres d'intérêts... </h4>
+            <h4 id="intro-hobbies-title"> Quelques centres d'intérêts... </h4>
             <div id="intro-hobbies-liste">
                 <button class="intro-hobbies-liste-hobby">
                     <i class="fas fa-pencil-alt hobby-icon"></i>
@@ -76,12 +74,39 @@
                 </button>
             </div>
         </div>
+
+        <div id="intro-hobbies">
+            <h4 id="intro-hobbies-title"> Mes soft skills </h4>
+            <div id="intro-hobbies-liste">
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-ear-listen hobby-icon"></i> <!-- Écoute active -->
+                    A l'écoute
+                </button>
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-dumbbell hobby-icon"></i> <!-- Effort et persévérance -->
+                    Persévérante
+                </button>
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-bolt hobby-icon"></i> <!-- Énergie et motivation -->
+                    Motivée
+                </button>
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-tasks hobby-icon"></i> <!-- Organisation et méthodologie -->
+                    Méthodique
+                </button>
+                <button class="intro-hobbies-liste-hobby">
+                    <i class="fas fa-people-arrows hobby-icon"></i> <!-- Adaptabilité et polyvalence -->
+                    Polyvalente
+                </button>
+            </div>
+        </div>
+        
     </div>
 
     <!-- COMPETENCES-->
     
     <div id="competences">
-        <h4 id="Competences">Compétences</h4>
+        <h4 id="competences_titre">Compétences et Maîtrises</h4>
         <div id="competences_general">
             <div id="competences_general_cv">
                 <img id="cv-preview" src="assets/images/Lavergne_Elsa_CV.png" alt="Aperçu du CV" onclick="window.open('assets/pdf/Lavergne_Elsa_CV.pdf')">
@@ -147,11 +172,20 @@
                     </div>
                 </div>
                 <div class="competences_item">
-                    <img class="competences_logo" src="./assets/images/PHP-logo.svg.png" alt="Typescript"/>
+                    <img class="competences_logo" src="./assets/images/PHP-logo.svg.png" alt="PHP"/>
                     <div class="competences_statistiques_general_details">
                         <label for="competences_statistiques_general_barre_ts">PHP</label>
                         <progress id="competences_statistiques_general_barre_ts" value="25" max="50"></progress>
                         <p class="competences_technos_details">-Projet BTSPlay</p>
+                    </div>
+                </div>
+                <div class="competences_item">
+                    <img class="competences_logo" src="./assets/images/docker.png" alt="Docker"/>
+                    <div class="competences_statistiques_general_details">
+                        <label for="competences_statistiques_general_barre_ts">Docker</label>
+                        <progress id="competences_statistiques_general_barre_ts" value="25" max="50"></progress>
+                        <p class="competences_technos_details">-Projet BTSPlay</br>
+                        -Cours à l'IUT</p>
                     </div>
                 </div>
             </div>             
@@ -188,17 +222,6 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card" onclick="showDescription('projets-description-projet-BTS')">
-                        <div class="card-header">
-                            <img src="./assets/images/BTSPlay.png" alt="Projet 2" class="card-image"/>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">BTSPlay</h3>
-                            <p class="card-description">Projet étudiant - Media Asset Manager - PHP - FTP - SQL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
                     <div class="card" onclick="showDescription('projets-description-projet-NDI2023')">
                         <div class="card-header">
                             <img src="./assets/images/photoDeLaTeam.png" alt="Projet 2" class="card-image"/>
@@ -220,6 +243,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -246,7 +270,7 @@
             </p>
             <p id="projets-description-projet-NDI2023" class="projets-description-projet-text" style="display: none;">J'ai participé à la nuit de l'info 2023 dans l'équipe Fromage et Desserts.</br>
                 Nous avons dû créer un site éducatif au sujet des fake news sur le réchauffement climatique.</br>
-                Le site est accessible <a href="https://50nuancesdesel.alwaysdata.net/index.php/index.php">ici</a>. 
+                Le Github est accessible <a href="https://github.com/Yxshad/Fromage-et-Dessert">ici</a>. 
             </p>
         </div>
         
@@ -260,7 +284,7 @@
         <div id="contact">
             <div class="contact_section">
                 <h4>Me contacter</h4>
-                <a href="https://github.com/TonPseudo" class="contact_link">
+                <a href="https://github.com/Yxshad" class="contact_link">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> Mon Github
                 </a>
                 <a href="mailto:tonemail@example.com" class="contact_link">
@@ -268,8 +292,8 @@
                 </a>
             </div>
             <div class="contact_section">
-                <h4>Mes réseaux sociaux</h4>
-                <a href="https://github.com/TonPseudo" class="contact_link">
+                <h4>Mes réseaux</h4>
+                <a href="https://github.com/Yxshad" class="contact_link">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub
                 </a>
                 <a href="https://www.linkedin.com/in/elsa-lavergne-a98826263/" class="contact_link">
