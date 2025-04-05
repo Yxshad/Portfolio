@@ -1,8 +1,8 @@
 /*BALISES GENERALES*/
 
 body{
-    background: linear-gradient(#5856b9, #070a30);
-    color:whitesmoke;
+    background: linear-gradient(#f5f7fa, #e3d9ce);
+    color: rgb(0, 0, 0);
     margin: 0;
     min-height: 100vh;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,18 +14,12 @@ section {
     scroll-margin-top: 5em; /* Décale les sections pour compenser la navbar */
 }
 
-h4{
-    
-    font-size: 1.5em;
-    margin-top: 2%;
-    margin-bottom: 0;
-}
-
 h1{
     font-family: fantasy;
     font-weight: bold;
     font-size: 1em;
     margin-bottom: 0;
+    color: #000000;
 }
 
 progress {
@@ -41,9 +35,9 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background: linear-gradient(to right, #007bff, #00bfff);
-    border-radius: 6px;
+    background: linear-gradient(to right, #0077b6, #0096c7);
 }
+
 
 /*******************************/
 
@@ -53,19 +47,20 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(20, 20, 80, 0.9);
+    background: rgba(43, 52, 69, 0.9);
     padding: 0 20px;
     height: 4em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
+#intro, #experience, #competences, #projets {
+    scroll-margin-top: 4em; 
+}
 
-/**** HELLO  WORLD  ANIMATION*****/
 
 
 #logo-text {
@@ -84,58 +79,58 @@ nav {
 
 #chapitrage {
     display: flex;
-    gap: 20px; /* Espace entre les liens */
-    height: 100%; /* Empêche les éléments de sortir */
-    align-items: center; /* Centre bien les liens */
-    margin-right:3%;
+    gap: 20px;
+    align-items: center;
+    margin-right: 3%;
 }
 
 #chapitrage a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     font-size: 1.2em;
     font-weight: 500;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #chapitrage a:hover {
-    color: #9900ff; /* Jaune doré au survol */
+    color: #0096c7;
+    transform: scale(1.1);
 }
 
-/*////////////////////*/
-/*  MAIN CONTENT  */
-
-/*  BAN DEBUT - ARRIVEE SITE  */
-#banniere{
+#banniere {
     display: flex;
     justify-content: center;
-    min-height: 70vh;
-    background-image: url("./assets/images/banniere.jpg");
-    background-blend-mode: luminosity;
-    background-color: #4d3da5;
-    background-size: cover;
     align-items: center;
-    font-family: fantasy;
+    min-height: 70vh;
+    background: linear-gradient(rgba(34, 37, 39, 0.8), rgba(34, 37, 39, 0.8)), url("./assets/images/banniere.png");
+    background-size: cover;
+    text-align: center;
 }
 
-#banniere_Contenu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#banniere_Contenu {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 7%;
 }
 
 #banniere_Contenu:hover{
     opacity: 80%;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /*////////////////////*/
-/* A PROPOS AND SHIT */
+/* A PROPOS */
 
 #intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #4a5bbd, #7986e6); /* Dégradé moderne */
+    background: linear-gradient(135deg, #ddeefc, #b8cde6);
     text-align: center;
     padding: 50px 10%;
     border-radius: 10px;
@@ -177,18 +172,18 @@ nav {
     justify-content: center;
     width: 45%;
     align-items: center;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
+    color: #333;
     padding: 20px;
     border-radius: 10px;
     backdrop-filter: blur(10px); /* Effet verre dépoli */
-    color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .intro_titrePlusDescription h4 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: white; /* Or */
+    color: rgba(43, 52, 69, 0.9);
 }
 
 #intro_titrePlusDescription_Text {
@@ -204,11 +199,13 @@ nav {
 #competences{
     display: flex;
     flex-direction: column;
+    background: linear-gradient(135deg, #ddeefc, #b8cde6);
     align-items: center;
 }
 
 #competences_titre{
     margin-bottom: 20px;
+    color:rgba(43, 52, 69, 0.9);
 }
 
 #competences_general{
@@ -245,7 +242,7 @@ nav {
 
 .btn-download {
     display: inline-block;
-    background: #9156e6;
+    background: rgba(43, 52, 69, 0.9);    
     color: white;
     padding: 12px 18px;
     font-size: 16px;
@@ -258,61 +255,18 @@ nav {
 }
 
 .btn-download:hover {
-    background: #6c3dc1;
-}
-
-/* MODALE*/
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    height: 90%;
-}
-
-.modal-content iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2em;
-    cursor: pointer;
-    color: white;
+    background: #0096c7;
 }
 
 /************************/
 
 #competences_general_technos {
-    flex: 1; 
+    flex: 1;
     display: grid;
     width: 50%;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Fixe exactement 2 colonnes */
     gap: 20px;
-    margin-right: 10px;
-}
+    margin-right: 10px;}
 
 .competences_row {
     display: flex;
@@ -328,7 +282,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(97, 89, 127, 0.2);
     padding: 12px 20px;
     border-radius: 12px;
     transition: transform 0.3s ease-in-out;
@@ -352,7 +306,7 @@ nav {
 .competences_item label {
     font-weight: bold;
     font-size: 14px;
-    color: #ffffff;
+    color: rgba(43, 52, 69, 0.9);    
     margin-bottom: 2px; /* Espace réduit sous le label */
 }
 
@@ -376,7 +330,7 @@ progress {
 .competences_technos_details {
     margin-top: 2px;
     font-size: 12px;
-    color: #dddddd;
+    color: rgba(43, 52, 69, 0.9);
     margin-bottom: 0;
 }
 
@@ -405,7 +359,7 @@ progress {
 /* Labels */
 .competences_statistiques_general_details label {
     font-weight: bold;
-    color: white;
+    color: rgba(43, 52, 69, 0.9);
     display: block;
     margin-bottom: 5px;
 }
@@ -413,7 +367,8 @@ progress {
 /*  PROJETS  */
 
 #projets{
-        background-color: #5660b9;
+        background: #b8cde6;
+        color:rgba(43, 52, 69, 0.9);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -433,8 +388,3 @@ progress {
     margin-bottom: 20px;
 }
 
-@media (max-width: 850px) {
-    #competences_general {
-        flex-direction: column;
-        align-items: center;
-    }}

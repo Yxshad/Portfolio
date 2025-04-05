@@ -7,45 +7,201 @@
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#intro-hobbies-title {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: white;
-}
-
-/* --- LISTE DE BOUTONS --- */
 #intro-hobbies-liste {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
+    width: 100%;
 }
 
-/* --- STYLE DES BOUTONS --- */
-button {
-    padding: 12px 20px;
-    border: none;
-    background: linear-gradient(135deg, rgb(163, 87, 214), rgb(195, 138, 233));
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+/* --- LISTE DE CARTES --- */
+#intro-hobbies-liste {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    gap: 20px;
 }
 
-button .hobby-icon {
+/* --- STYLE DES CARTES --- */
+.intro-hobbies-liste-hobby-card {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.intro-hobbies-liste-hobby-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.intro-hobbies-liste-hobby-card .hobby-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: rgba(43, 52, 69, 0.9);}
+
+.intro-hobbies-liste-hobby-card h5 {
+    margin: 10px 0;
+    color: rgba(43, 52, 69, 0.9);
     font-size: 18px;
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    cursor: default;
+.intro-hobbies-liste-hobby-card p {
+    color: rgba(89, 101, 124, 0.9);    
+    font-size: 14px;
+    margin: 0;
+}
+
+#experience {
+    position: relative;
+    padding: 50px 10%;
+    color: rgba(43, 52, 69, 0.9);
+    background: #b8cde6;;}
+
+#experience-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgba(43, 52, 69, 0.9);}
+
+#experience-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#experience-timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.experience-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.experience-item::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #3b82f6;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border: 4px solid white;
+}
+
+.experience-item:nth-child(even)::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.experience-content {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.experience-content:hover {
+    transform: scale(1.03);
+}
+
+.experience-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    font-size: 30px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.experience-content h5 {
+    margin: 0 0 10px 0;
+    color: rgba(43, 52, 69, 0.9);    
+    font-size: 1.2em;
+}
+
+.experience-content p {
+    margin: 5px 0;
+    color: rgba(43, 52, 69, 0.9);    
+    font-size: 0.9em;
+}
+
+.experience-date {
+    display: block;
+    text-align: right;
+    color: rgba(43, 52, 69, 0.9);
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    #intro-hobbies-liste {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    
+    .experience-item::after {
+        left: 20px;
+    }
+    
+    .experience-content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+    
+    .experience-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: none;
+    }
+    
+    .experience-item:nth-child(even) {
+        flex-direction: column;
+    }
 }

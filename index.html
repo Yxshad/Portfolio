@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="hobbysPart.css">
     <link href="./lib/Swiper/swiper-bundle.min.css" rel="stylesheet">
     <script src="./lib/Swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="./fonctions.js"></script> 
     <title>Portfolio</title>   
@@ -23,6 +24,7 @@
         </h1>
         <div id="chapitrage">
             <a href="#intro">A propos</a>
+            <a href="#experience">Expériences</a>
             <a href="#competences">Compétences</a>
             <a href="#projets">Projets</a>
         </div> 
@@ -53,55 +55,98 @@
                 </p>
             </div>
         </div>
-        <div id="intro-hobbies">
-            <h4 id="intro-hobbies-title"> Quelques centres d'intérêts... </h4>
-            <div id="intro-hobbies-liste">
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-pencil-alt hobby-icon"></i>
-                    Dessin
-                </button>
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-pen-fancy hobby-icon"></i>
-                    Ecriture
-                </button>
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-film hobby-icon"></i>
-                    Montage vidéo
-                </button>
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-palette hobby-icon"></i>
-                    Graphisme
-                </button>
+            <!-- Updated Hobbies Section with Cards -->
+    <div id="intro-hobbies">
+        <h4 id="intro-hobbies-title">Mes Passions et Soft Skills</h4>
+        <div id="intro-hobbies-liste">
+            <div class="intro-hobbies-liste-hobby-card">
+                <i class="fas fa-pencil-alt hobby-icon"></i>
+                <h5>Dessin</h5>
+                <p>Passion pour le dessin numérique et traditionnel, exploration de différents styles artistiques</p>
+            </div>
+            <div class="intro-hobbies-liste-hobby-card">
+                <i class="fas fa-pen-fancy hobby-icon"></i>
+                <h5>Écriture</h5>
+                <p>Écriture créative, développement de récits fantasy</p>
+            </div>
+            <div class="intro-hobbies-liste-hobby-card">
+                <i class="fas fa-film hobby-icon"></i>
+                <h5>Montage Vidéo</h5>
+                <p>Création et édition de vidéos amateur</p>
+            </div>
+            <div class="intro-hobbies-liste-hobby-card">
+                <i class="fas fa-palette hobby-icon"></i>
+                <h5>Graphisme</h5>
+                <p>Design graphique, création d'interface UI/UX</p>
             </div>
         </div>
-
-        <div id="intro-hobbies">
-            <h4 id="intro-hobbies-title"> Mes soft skills </h4>
-            <div id="intro-hobbies-liste">
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-ear-listen hobby-icon"></i> <!-- Écoute active -->
-                    A l'écoute
-                </button>
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-dumbbell hobby-icon"></i> <!-- Effort et persévérance -->
-                    Persévérante
-                </button>
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-bolt hobby-icon"></i> <!-- Énergie et motivation -->
-                    Motivée
-                </button>
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-tasks hobby-icon"></i> <!-- Organisation et méthodologie -->
-                    Méthodique
-                </button>
-                <button class="intro-hobbies-liste-hobby">
-                    <i class="fas fa-people-arrows hobby-icon"></i> <!-- Adaptabilité et polyvalence -->
-                    Polyvalente
-                </button>
-            </div>
-        </div>
-        
     </div>
+
+    <!-- Soft Skills Section -->
+        <div id="intro-hobbies">
+            <h4 id="intro-hobbies-title">Mes Soft Skills</h4>
+            <div id="intro-hobbies-liste">
+                <div class="intro-hobbies-liste-hobby-card">
+                    <i class="fas fa-ear-listen hobby-icon"></i>
+                    <h5>À l'écoute</h5>
+                    <p>Capacité à comprendre et intégrer les perspectives des autres</p>
+                </div>
+                <div class="intro-hobbies-liste-hobby-card">
+                    <i class="fas fa-dumbbell hobby-icon"></i>
+                    <h5>Persévérante</h5>
+                    <p>Détermination et engagement dans la réalisation des objectifs</p>
+                </div>
+                <div class="intro-hobbies-liste-hobby-card">
+                    <i class="fas fa-bolt hobby-icon"></i>
+                    <h5>Motivée</h5>
+                    <p>Énergie et enthousiasme dans l'approche des défis professionnels</p>
+                </div>
+                <div class="intro-hobbies-liste-hobby-card">
+                    <i class="fas fa-tasks hobby-icon"></i>
+                    <h5>Méthodique</h5>
+                    <p>Approche structurée et organisée dans la gestion de projets</p>
+                </div>
+                <div class="intro-hobbies-liste-hobby-card">
+                    <i class="fas fa-people-arrows hobby-icon"></i>
+                    <h5>Polyvalente</h5>
+                    <p>Adaptabilité et capacité à travailler efficacement dans divers contextes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience">
+        <h4 id="experience-title">Mon Parcours</h4>
+        <div id="experience-timeline">
+            <div class="experience-item">
+                <div class="experience-icon">🎓</div>
+                <div class="experience-content">
+                    <h5>Baccalauréat Général</h5>
+                    <p>Obtenu au Lycée de Tyrosse avec mention Très Bien</p>
+                    <p>Option Mathématiques Expertes</p>
+                    <p>Section Européenne Anglais</p>
+                    <span class="experience-date">2019-2022</span>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-icon">🖥️</div>
+                <div class="experience-content">
+                    <h5>IUT Informatique - Bayonne</h5>
+                    <p>Parcours Intégration d'Applications et Intégration des Systèmes d'Information</p>
+                    <span class="experience-date">2022 - Présent</span>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-icon">💼</div>
+                <div class="experience-content">
+                    <h5>Alternance - AG-CARTO</h5>
+                    <p>Développeur FullStack, travaillant sur des projets web et cartographiques</p>
+                    <span class="experience-date">2023 - Présent</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- COMPETENCES-->
     
@@ -175,7 +220,7 @@
                     <img class="competences_logo" src="./assets/images/PHP-logo.svg.png" alt="PHP"/>
                     <div class="competences_statistiques_general_details">
                         <label for="competences_statistiques_general_barre_ts">PHP</label>
-                        <progress id="competences_statistiques_general_barre_ts" value="25" max="50"></progress>
+                        <progress id="competences_statistiques_general_barre_ts" value="40" max="50"></progress>
                         <p class="competences_technos_details">-Projet BTSPlay</p>
                     </div>
                 </div>
@@ -183,7 +228,7 @@
                     <img class="competences_logo" src="./assets/images/docker.png" alt="Docker"/>
                     <div class="competences_statistiques_general_details">
                         <label for="competences_statistiques_general_barre_ts">Docker</label>
-                        <progress id="competences_statistiques_general_barre_ts" value="25" max="50"></progress>
+                        <progress id="competences_statistiques_general_barre_ts" value="30" max="50"></progress>
                         <p class="competences_technos_details">-Projet BTSPlay</br>
                         -Cours à l'IUT</p>
                     </div>
@@ -287,7 +332,7 @@
                 <a href="https://github.com/Yxshad" class="contact_link">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> Mon Github
                 </a>
-                <a href="mailto:tonemail@example.com" class="contact_link">
+                <a href="mailto:e.lavergne@outlook.com" class="contact_link">
                     <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail"> Mail personnel
                 </a>
             </div>
@@ -304,11 +349,14 @@
     </footer>
     
     
+<script>
+        gsap.from("nav", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+        gsap.from("#banniere_Contenu", { duration: 1.5, y: 50, opacity: 0, ease: "power2.out", delay: 0.5, onComplete: function() {
+            gsap.to("#banniere_Contenu", { opacity: 1 });
+        }});
+    </script>
 
-
-    <!-- MODALES -->
-
-    <!-- FENETRE MODALE 
+    <!-- MODALES AU CAS OU POUR PLUS TARD
 
     <div id="cv-modal" class="modal">
         <div class="modal-content">
