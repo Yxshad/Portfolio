@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="swipperStyle.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="Styles/swipperStyle.css">
     <link rel="stylesheet" href="hobbysPart.css">
     <link href="./lib/Swiper/swiper-bundle.min.css" rel="stylesheet">
     <script src="./lib/Swiper/swiper-bundle.min.js"></script>
@@ -17,19 +16,10 @@
 </head>
 <body>
 
-    <!-- NAVIGATEUR -->
-    <nav>
-        <h1 id="logo-text">
-            Hello World
-        </h1>
-        <div id="chapitrage">
-            <a href="#intro">A propos</a>
-            <a href="#experience">Expériences</a>
-            <a href="#competences">Compétences</a>
-            <a href="#projets">Projets</a>
-        </div> 
-    </nav>
-
+    <!-- NAVIGATION -->
+     <nav id="navbar"></nav>
+    <script>getNavBar()</script>
+    
     <!-- INTRO / ARRIVÉE -->
     <div id="banniere">
         <div id="banniere_Contenu">
@@ -330,32 +320,8 @@
     </div>
 
     
-      
-
-    <!--  FOOTER  -->
-    <footer>
-        <div id="contact">
-            <div class="contact_section">
-                <h4>Me contacter</h4>
-                <a href="https://github.com/Yxshad" class="contact_link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> Mon Github
-                </a>
-                <a href="mailto:e.lavergne@outlook.com" class="contact_link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail"> Mail personnel
-                </a>
-            </div>
-            <div class="contact_section">
-                <h4>Mes réseaux</h4>
-                <a href="https://github.com/Yxshad" class="contact_link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/elsa-lavergne-a98826263/" class="contact_link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn
-                </a>
-            </div>
-        </div>
-    </footer>
-    
+      <footer id="footer"></footer>
+    <script>getFooter()</script>
     
 <script>
         gsap.from("nav", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });

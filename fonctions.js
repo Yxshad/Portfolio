@@ -5,6 +5,24 @@
  * @Auteur : Elsa LAVERGNE (Shaggy)
  */
 
+function getNavBar() {
+  fetch("MajorComponents/navBar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    })
+    .catch(err => console.error("Error loading navbar:", err));
+}
+
+function getFooter() {
+  fetch("MajorComponents/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Error loading footer:", err));
+}
+
 function initCarrousel(){
     const swiperVideo = new Swiper('.swiper', {
         slidesPerView: 3,
